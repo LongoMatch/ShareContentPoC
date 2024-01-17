@@ -12,5 +12,15 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <StackPanel
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center">
+      <Button
+          Content="Share text"
+          Click="OnShareText"/>
+      <Button
+          Margin="0,24,0,0"
+          Content="Share pdf file"
+          Click="OnSharePdfFile"/>
+  </StackPanel>
 </UserControl>

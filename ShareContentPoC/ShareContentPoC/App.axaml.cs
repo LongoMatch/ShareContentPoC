@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using ShareContentPoC.Abstractions.Services;
 using ShareContentPoC.ViewModels;
 using ShareContentPoC.Views;
 
@@ -8,6 +9,8 @@ namespace ShareContentPoC;
 
 public partial class App : Application
 {
+    public static IShareService ShareService { get; set; } = null!;
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);

@@ -1,8 +1,10 @@
 ﻿using Android.App;
 using Android.Content.PM;
+using Android.OS;
 using Avalonia;
 using Avalonia.Android;
 using Avalonia.ReactiveUI;
+using ShareContentPoC.Android.Services;
 
 namespace ShareContentPoC.Android;
 
@@ -19,5 +21,11 @@ public class MainActivity : AvaloniaMainActivity<App>
         return base.CustomizeAppBuilder(builder)
             .WithInterFont()
             .UseReactiveUI();
+    }
+
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        base.OnCreate(savedInstanceState);
+        App.ShareService = new ShareService(this);
     }
 }

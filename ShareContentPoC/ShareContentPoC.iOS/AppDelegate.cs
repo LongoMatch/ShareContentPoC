@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using Avalonia.iOS;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
+using ShareContentPoC.iOS.Services;
 
 namespace ShareContentPoC.iOS;
 
@@ -16,6 +17,11 @@ namespace ShareContentPoC.iOS;
 public partial class AppDelegate : AvaloniaAppDelegate<App>
 #pragma warning restore CA1711 // Identifiers should not have incorrect suffix
 {
+    public AppDelegate()
+    {
+        App.ShareService = new ShareService();
+    }
+
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
     {
         return base.CustomizeAppBuilder(builder)

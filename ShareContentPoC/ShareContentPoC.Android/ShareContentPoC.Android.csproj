@@ -25,4 +25,12 @@
   <ItemGroup>
     <ProjectReference Include="..\ShareContentPoC\ShareContentPoC.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Resources\xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Resources\xml\" />
+  </ItemGroup>
 </Project>
